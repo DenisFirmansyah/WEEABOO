@@ -1,6 +1,6 @@
 <?php
 require 'functions.php';
 session_destroy();
-header("Location: ../index.php");
+header("Location: ../dashboard.php");
 exit;
 ?>

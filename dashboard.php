@@ -1,5 +1,4 @@
 <?php 
-
 require ('component/functions.php');
 $pixel = query("SELECT p.*, u.username FROM pixel p INNER JOIN user u ON p.user_id = u.id ");
 
@@ -24,12 +23,13 @@ if (isset($_GET["cari"])) {
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<!-- css -->
 		<link rel="stylesheet" type="text/css" href="css/public/index.css">
+		<link rel="manifest" href="manifest.json">
 </head>
 <body>
 	<?php
 		include "component/header.php"
 	?>
-    <div id="myNav" class="overlay">
+    <!-- <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
             <a href="#">About</a>
@@ -38,7 +38,7 @@ if (isset($_GET["cari"])) {
             <a href="#">Contact</a>
         </div>
     </div>
-	<span id="filter" class="gateway filter-btn" onclick="openNav()">Filter</span>
+	<span id="filter" class="gateway filter-btn" onclick="openNav()">Filter</span> -->
 	
 
 	<div class="container">
@@ -81,17 +81,7 @@ if (isset($_GET["cari"])) {
 	?>
 
 	<!-- icons -->
-	<script>
-        // feather.replace()
-        function openNav() {
-        document.getElementById("myNav").style.height = "50%";
-        document.getElementById("filter").classList.add("shift");
-        }
-
-        function closeNav() {
-        document.getElementById("myNav").style.height = "0%";
-        document.getElementById("filter").classList.remove("shift");
-        }
+	<script src="app.js">
     </script>
 </body>
 </html>

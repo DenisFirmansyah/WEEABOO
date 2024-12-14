@@ -1,5 +1,5 @@
 <?php
-require 'funcions.php';
+require 'component/funcions.php';
 
 // if (!isset($_SESSION["login"])) {
 // 	header('Location: login.php');

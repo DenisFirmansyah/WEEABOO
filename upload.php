@@ -5,19 +5,17 @@ if (!isset($_SESSION["login"])) {
 	exit;
 }
 
-$connect = mysqli_connect("localhost", "root", "", "tokoonline", 3306);
-//cek apakah tombol submit sudah pernah di tekan
 if (isset($_POST["submit"])) {
 	if (tambah($_POST) > 0) {
 		echo 
 		"<script>
-		alert ('data produk berhasil di tambah!');
+		alert ('Data Was Created Successfully!');
 		// document.location.href = '../halaman_admin.php';
 		</script>"
 		;
 
 	} else {
-		echo "data produk gagal ditambahkan!";
+		echo "Data Failed to Create!";
 	}
 }
 
