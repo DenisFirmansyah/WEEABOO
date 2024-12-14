@@ -1,0 +1,145 @@
+:root {
+	--primary: #21130d;
+	--bg: #fbfcfa;
+	--sbg: #f2f5f0;
+}
+
+* {
+	font-family: 'Poppins', sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	border: none;
+}
+
+body {
+	background-color: var(--sbg);
+	color: black;
+}
+
+.container {
+	background-color: var(--bg);
+	width: 70%;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+
+.head header {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.head {
+	background-color: var(--bg);
+}
+
+header .left-session {
+	width: 30%;
+	text-align: center;
+}
+
+header .left-session h1::before {
+	content: '';
+	border-bottom: 1px solid black;
+	padding-bottom: 3px;
+	transform: scaleX(0.5);
+}
+
+header .right-session {
+	display: flex;
+	justify-content: space-around;
+	width: 20%;
+}
+
+.right-session .sapa {
+	width: 70%;
+	display: flex;
+	align-items: center;
+}
+
+.sapa p {
+	text-align: center;
+	font-size: 20px;
+}
+
+.right-session .exit {
+	display: flex;
+	align-items: center;
+}
+
+.exit a img {
+	width: 25px;
+	height: 25px;
+}
+
+.form {
+	margin: 20px 5px;
+}
+
+form {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.choosen {
+	margin: 20px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.table{
+	width: 95%;
+	box-shadow: 1px 1px 1px 3px black;
+	margin: auto;
+	border-radius: 7px;
+	text-align: center;
+	overflow-x: auto;
+}
+.table table{
+	border-collapse: collapse;
+	width: 100%;
+}
+.table table tr th{
+	padding: 0 20px;
+	margin: 0;
+	border: 1px solid black;
+}
+.table table tr td{
+	margin: 0;
+	padding: 0 10px;
+	border: 1px solid black;
+}
+
+table tr .desk {
+	text-align: left;
+}
+
+form input {
+	height: 30px;
+	width: 88%;
+	padding-left: 15px;
+	background-color: var(--sbg);
+	border: transparent;
+	outline: transparent;
+	font-size: 16px;
+}
+
+form button {
+	background-color: var(--sbg);
+	padding: 3px;
+}
+
+.choosen a img {
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+}
+
+.choosen a {
+	display: flex;
+	align-items: center;
+}

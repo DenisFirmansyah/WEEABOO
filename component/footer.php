@@ -1,0 +1,1 @@
+<img src="img/heading-2.png" alt="" width=100%>
