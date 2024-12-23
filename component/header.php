@@ -4,15 +4,17 @@
 <!-- Navigation Bar -->
 	<nav id="navbar">
 		<!-- LEFT GRID -->
-		 <div id="navbar-main">
-			<div >
-				<img src="img/weaboo-1.png" alt="weaboo" width="50">
+		 <a href="/dashboard.php" style="text-decoration: none; color: white;">
+			<div id="navbar-main">
+						<div >
+							<img src="img/weaboo-1.png" alt="weaboo" width="50">
+						</div>
+						<div>
+							<div id="navbar-title">WEABOO</div>
+							<div id="sub-title">Growtopia Anime Community</div>
+						</div>
 			</div>
-			<div>
-				<div id="navbar-title">WEABOO</div>
-				<div id="sub-title">Growtopia Anime Community</div>
-			</div>
-		 </div>
+		 </a>
 		 <!-- <div id="navbar-middle">
 			<form action="" method="get">
 				<input type="text" name="keyword" size="auto" autofocus placeholder="Find your Char/Anime" autocomplete="on">

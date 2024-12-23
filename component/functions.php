@@ -132,7 +132,7 @@ function cari($keyword) {
 
 }
 
-function registrasi($data) {
+function register($data) {
 	global $connect;
 	$username = strtolower($data["username"]);
 	$password = mysqli_real_escape_string($connect, $data["password"]);

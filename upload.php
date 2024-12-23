@@ -40,7 +40,7 @@ if (isset($_POST["submit"])) {
 	?>
 	<div class="container">
 		<header>
-			<p>UPLOAD PIXEL ART</p>
+			<h1>UPLOAD PIXEL ART</h1>
 		</header>
 		
 		<form action="" method="post" enctype="multipart/form-data">
@@ -57,13 +57,13 @@ if (isset($_POST["submit"])) {
                         </td>
                         <td>:</td>
                         <td>
-                            <input class="input" type="text" name="image" id="image" placeholder="s3.amazonaws.com/world.growtopiagame.com/weeaboo.png" required autocomplete="off">
+                            <input class="input" type="text" name="image" id="image" placeholder="Enter renderlink here" required autocomplete="off">
                         </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>example: s3.amazonaws.com/world.growtopiagame.com/weeaboo.png</td>
+                        <td class="example">example: s3.amazonaws.com/world.growtopiagame.com/weeaboo.png</td>
                     </tr>
                     <tr>
                         <!-- <div class="input-group">

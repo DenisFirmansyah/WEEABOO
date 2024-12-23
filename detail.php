@@ -1,7 +1,14 @@
 <?php 
 require ('component/functions.php');
+if (isset($_SESSION['user']) && isset($_SESSION['user']['id'])) {
+    $user_id = $_SESSION['user']['id'];
+} else {
+    // Jika tidak login, redirect atau tampilkan pesan error
+    $user_id = null; // atau arahkan ke halaman login
+    
+}
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
-$sql = "SELECT p.*, u.username FROM pixel p INNER JOIN user u ON p.user_id = u.id WHERE p.id = ?";
+$sql = "SELECT p.*, u.username FROM pixel p JOIN user u ON p.user_id = u.id WHERE p.id = ?";
 
 $stmt = $connect->prepare($sql);
 if (!$stmt) {
@@ -14,6 +21,11 @@ $result = $stmt->get_result();
 $data = $result->fetch_assoc();
 if (!$data) {
     die("No data found for ID $id.");
+}
+
+if ($data) {
+    // Periksa apakah user yang login memiliki gambar ini
+    $is_owner = $user_id && $data['user_id'] == $user_id;
 }
 ?>
 
@@ -55,13 +67,18 @@ if (!$data) {
                     <td style="padding-inline: 10px;">:</td>
                     <td><?php echo $data["username"]; ?></td>
                 </tr>
+                <?php if (isset($is_owner) && $is_owner) { ?>
                 <tr>
-                    <?php if (isset($_SESSION['user'])) {?>
-                        <button>
-                            Edit
-                        </button>
-                    <?php } ?>
+                    <td>
+                        <a href="edit.php?id=<?= $data['id'] ?>">
+                            <button style="padding-inline: 10px; padding-block: 4px">Edit</button>
+                        </a>
+                        <a href="delete.php?id=<?= $data['id'] ?>" onclick="return confirm('Are you sure you want to delete this post?');">
+                            <button style="padding-inline: 10px; padding-block: 4px">Delete</button>
+                        </a>
+                    </td>
                 </tr>
+                <?php }?>
             </table>
         </div>
     </div>

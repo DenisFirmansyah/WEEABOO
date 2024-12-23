@@ -7,6 +7,7 @@ const urlsToCache = [
   '/weaboo/dashboard.php',
   '/weaboo/css/public/index.css',
   '/weaboo/offline.html',
+  '/weaboo'
 ];
 
 // Install Service Worker

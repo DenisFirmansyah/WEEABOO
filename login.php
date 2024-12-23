@@ -2,6 +2,7 @@
 require 'component/functions.php';
 
 if (isset($_SESSION["login"])) {
+	$_SESSION['id'] = $user['id'];
 	header("Location: dashboard.php");
 	exit;
 }
